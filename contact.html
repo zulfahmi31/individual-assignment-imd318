@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ami's Website!">
+    <title>Contact - Ami's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container">
+            <h1>Ami's Website!</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="hobby.html">Hobby</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="friends.html">Friends</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out if you have any questions or just want to chat. You can contact me via email at <a href="mailto:zulfahmi0831@gmail.com">zulfahmi0831@gmail.com</a>.</p>
+            
+            <form id="contact-form">
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Phone:</label></td>
+                        <td><input type="tel" id="phone" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </form>
+
+            <!-- Thank You Message (Hidden initially) -->
+            <div id="thank-you-message" class="thank-you-message" style="display:none;">
+                <p>Thank You For Your Register!</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h3>Follow Me</h3>
+                <a href="https://www.facebook.com/profile.php?id=100010489710685" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/?next=%2Fyourprofile%2F" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@youandme639" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Zulfahmi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission and display the "Thank You" message
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents form from submitting and page refreshing
+
+            // Hide the form
+            document.getElementById('contact-form').style.display = 'none';
+
+            // Display the Thank You message
+            document.getElementById('thank-you-message').style.display = 'block';
+        });
+    </script>
+
+</body>
+
+</html>
